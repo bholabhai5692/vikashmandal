@@ -1,6 +1,2 @@
 name = "vikashmandal"
-main = "index.html" # Required for static sites, but not used.
-compatibility_date = "2024-05-01"
-
-[site]
-bucket = "." # Serve assets from the root directory
+pages_build_output_dir = "."
