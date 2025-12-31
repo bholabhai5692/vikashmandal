@@ -1,0 +1,10 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "A simple static site for Cloudflare Pages.",
+  "scripts": {
+    "build": "echo 'No build needed, deploying static site.'"
+  },
+  "author": "",
+  "license": "ISC"
+}
