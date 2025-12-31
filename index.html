@@ -5,97 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToolVerse - Your Ultimate Toolkit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
-        }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #E5E5E5;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top, rgba(126, 87, 194, 0.2), transparent 50%), radial-gradient(circle at bottom, rgba(59, 130, 246, 0.1), transparent 60%), #0A0A0A;
+        }
+        .feature-card {
+            background: #121212;
+            border: 1px solid #27272A;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: #A855F7;
+            box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.2);
+        }
+        .btn-primary {
+            background-color: #A855F7;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #9333EA;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="antialiased">
 
     <!-- Header -->
-    <header class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">ToolVerse</h1>
-        <nav>
-            <a href="#features" class="px-4 hover:text-blue-300">Features</a>
-            <a href="#pricing" class="px-4 hover:text-blue-300">Pricing</a>
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Sign Up</a>
-        </nav>
+    <header class="container mx-auto px-6 py-5">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter text-white">ToolVerse</h1>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a>
+                <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                <a href="#" class="btn-primary font-semibold py-2 px-5 rounded-lg">Sign Up</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <main>
-        <section class="hero-gradient text-center py-20 px-6">
-            <h2 class="text-5xl font-extrabold mb-4">The All-In-One Toolkit for Modern Makers</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Stop juggling multiple apps. ToolVerse brings your favorite utilities for developers, designers, and writers into one seamless workflow.</p>
-            <a href="#" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Get Started for Free</a>
+        <section class="hero-gradient text-center pt-24 pb-32 px-6">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-5 tracking-tighter text-white">One Toolkit to Rule Them All</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-400">Stop juggling dozens of single-purpose apps. ToolVerse brings your essential utilities for developers, designers, and creators into one beautifully simple workflow.</p>
+            <a href="#" class="btn-primary font-bold py-4 px-10 rounded-lg text-lg hover:scale-105 transform transition-transform">Get Started - It's Free</a>
         </section>
 
         <!-- Features Section -->
-        <section id="features" class="py-20 bg-gray-800">
+        <section id="features" class="py-24 bg-[#0A0A0A]">
             <div class="container mx-auto px-6">
-                <h3 class="text-4xl font-bold text-center mb-12">A Universe of Tools</h3>
+                <div class="text-center mb-16">
+                    <span class="text-purple-400 font-semibold">Our Features</span>
+                    <h3 class="text-4xl font-bold text-white mt-2">A Universe of Tools</h3>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Everything you need to build, design, and write, right at your fingertips.</p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <!-- Feature 1 -->
-                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <div class="text-blue-400 mb-4">
-                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l-4 4-4-4-4 4"></path></svg>
+                    <div class="feature-card p-8 rounded-2xl">
+                        <div class="bg-purple-900/50 inline-flex p-3 rounded-xl mb-5">
+                            <svg class="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l-4 4-4-4-4 4"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">Code Utilities</h4>
-                        <p class="text-gray-400">Format JSON, convert Base64, generate UUIDs, and more without leaving your browser.</p>
+                        <h4 class="text-xl font-bold mb-2 text-white">Code Utilities</h4>
+                        <p class="text-gray-400">Format JSON, convert Base64, generate UUIDs, and minify code without leaving your browser.</p>
                     </div>
                     <!-- Feature 2 -->
-                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <div class="text-blue-400 mb-4">
-                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    <div class="feature-card p-8 rounded-2xl">
+                        <div class="bg-purple-900/50 inline-flex p-3 rounded-xl mb-5">
+                            <svg class="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">Design Helpers</h4>
-                        <p class="text-gray-400">Pick colors, generate gradients, and create SVG shapes with our intuitive design tools.</p>
+                        <h4 class="text-xl font-bold mb-2 text-white">Design Helpers</h4>
+                        <p class="text-gray-400">A color picker, gradient generator, and SVG shape creator for pixel-perfect designs.</p>
                     </div>
                     <!-- Feature 3 -->
-                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <div class="text-blue-400 mb-4">
-                             <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    <div class="feature-card p-8 rounded-2xl">
+                        <div class="bg-purple-900/50 inline-flex p-3 rounded-xl mb-5">
+                             <svg class="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">Content Creators</h4>
-                        <p class="text-gray-400">Generate headlines, check grammar, and count words with tools designed for writers.</p>
+                        <h4 class="text-xl font-bold mb-2 text-white">Content Creation</h4>
+                        <p class="text-gray-400">Generate headlines, check grammar, count words, and get content ideas instantly.</p>
                     </div>
                 </div>
             </div>
         </section>
         
         <!-- Pricing Section -->
-        <section id="pricing" class="py-20">
+        <section id="pricing" class="py-24">
             <div class="container mx-auto px-6 text-center">
-                 <h3 class="text-4xl font-bold mb-2">Simple, Transparent Pricing</h3>
-                 <p class="text-lg text-gray-400 mb-10">Choose the plan that's right for you.</p>
-                 <div class="flex flex-col md:flex-row justify-center max-w-3xl mx-auto gap-8">
-                    <div class="border border-blue-500 rounded-xl p-8 w-full">
-                        <h4 class="text-2xl font-bold">Free</h4>
-                        <p class="text-5xl font-extrabold my-4">$0<span class="text-lg font-medium text-gray-400">/mo</span></p>
-                        <ul class="text-left space-y-2 text-gray-300">
-                            <li>✓ Access to all basic tools</li>
-                            <li>✓ 10 saves per month</li>
-                            <li>✓ Community support</li>
+                 <h3 class="text-4xl font-bold mb-3 text-white">Simple, Transparent Pricing</h3>
+                 <p class="text-lg text-gray-400 mb-12">Choose the plan that's right for you.</p>
+                 <div class="flex flex-col lg:flex-row justify-center max-w-4xl mx-auto gap-8">
+                    <div class="feature-card p-8 w-full rounded-2xl">
+                        <h4 class="text-2xl font-bold text-white">Free</h4>
+                        <p class="text-5xl font-extrabold my-4 text-white">$0<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                        <ul class="text-left space-y-3 text-gray-400 mb-8">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Access to all basic tools</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10 saves per month</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Community support</li>
                         </ul>
-                        <button class="mt-8 w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg">Current Plan</button>
+                        <button class="w-full bg-gray-700/50 hover:bg-gray-700/80 text-white font-semibold py-3 px-4 rounded-lg border border-gray-600 transition-colors">Get Started</button>
                     </div>
-                    <div class="border-2 border-blue-400 rounded-xl p-8 w-full shadow-lg shadow-blue-500/20 relative">
-                         <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
-                        <h4 class="text-2xl font-bold">Pro</h4>
-                        <p class="text-5xl font-extrabold my-4">$9<span class="text-lg font-medium text-gray-400">/mo</span></p>
-                        <ul class="text-left space-y-2 text-gray-300">
-                            <li>✓ Access to all Pro tools</li>
-                            <li>✓ Unlimited saves</li>
-                            <li>✓ Priority email support</li>
+                    <div class="feature-card p-8 w-full rounded-2xl border-2 border-purple-500 relative">
+                         <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+                        <h4 class="text-2xl font-bold text-white">Pro</h4>
+                        <p class="text-5xl font-extrabold my-4 text-white">$9<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                        <ul class="text-left space-y-3 text-gray-400 mb-8">
+                           <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Access to all Pro tools</li>
+                           <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited saves & history</li>
+                           <li class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority email support</li>
                         </ul>
-                        <button class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg">Upgrade to Pro</button>
+                        <button class="w-full btn-primary font-semibold py-3 px-4 rounded-lg transition-transform hover:scale-105">Upgrade to Pro</button>
                     </div>
                  </div>
             </div>
@@ -103,8 +132,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto py-6 px-6 text-center text-gray-400">
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto py-8 px-6 text-center text-gray-500">
             <p>&copy; 2024 ToolVerse. All Rights Reserved.</p>
         </div>
     </footer>
