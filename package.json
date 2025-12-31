@@ -2,8 +2,9 @@
   "name": "static-site",
   "version": "1.0.0",
   "description": "A simple static site for Cloudflare Pages.",
+  "main": "public/index.html",
   "scripts": {
-    "build": "echo 'No build needed, deploying static site.'"
+    "deploy": "wrangler pages deploy public"
   },
   "author": "",
   "license": "ISC"
